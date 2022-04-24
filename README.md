@@ -1,2 +1,3 @@
 # SampleCQRSProject
-Sample CQRS Project
+
+Don't forget to change Connection String before run.
