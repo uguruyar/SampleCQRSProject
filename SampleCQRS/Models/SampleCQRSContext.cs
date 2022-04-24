@@ -12,7 +12,7 @@ public class SampleCQRSContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Post>().HasData(
-            new Post() {Id = 5, Title = "Episode 9", Content = "The Rise of Skywalker"},
+            new Post() {Id = 1, Title = "Episode 1", Content = "The Rise of Skywalker"},
             new Post() {Id = 2, Title = "Episode 2", Content = "Attack of the Clones"},
             new Post() {Id = 3, Title = "Episode 3", Content = "Revenge of the Sith"},
             new Post() {Id = 4, Title = "Episode 4", Content = "A New Hope"},
