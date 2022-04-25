@@ -1,11 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using SampleCQRS.Models;
+using SampleCQRS.Services.Commands;
+using SampleCQRS.Services.Queries;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+builder.Services.AddScoped<IQueriesService, QueriesService>();
+builder.Services.AddScoped<ICommandService, CommandService>();
 
 builder.Services.AddDbContext<SampleCQRSContext>(
     options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
